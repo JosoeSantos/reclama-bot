@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
-require('dotenv').config()
+const parse = require('dotenv').config({path: './.env'});
+
+if(parse.error) {
+    throw parse.error;
+}
 
 const client = new Discord.Client();
 
