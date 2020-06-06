@@ -9,7 +9,7 @@ client.on('ready', () => {
 });
 client.on('error', (e) => console.log(e));
 
-client.login('NzE4NjU0NzE1MTkzMTk2NjI0.XtsGEQ.pn1xvYPkmMU9usfmMT4CjErCGuM');
+client.login(process.env.CLIENT_TOKEN);
 
 function getUserFromMention(mention) {
 	if (!mention) return;
