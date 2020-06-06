@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const parse = require('dotenv').config({path: '.env'});
+const parse = require('dotenv').config({path: __dirname + '/.env'});
 
 if(parse.error) {
     throw parse.error;
