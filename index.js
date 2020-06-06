@@ -12,7 +12,19 @@ client.on('error', (e) => console.log(e));
 
 const token = process.env.CLIENT_TOKEN;
 
-client.login(token);
+console.log(`logging in whith token ${token}`, );
+
+client.login(token)
+    .then(onLogin)
+    .catch(onError);
+
+function onError(err) {
+    console.error(err)
+}
+
+function onLogin() {
+    console.log('Login succesfull');
+} 
 
 function getUserFromMention(mention) {
 	if (!mention) return;
